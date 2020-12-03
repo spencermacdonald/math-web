@@ -12,7 +12,6 @@ class MersenneFast extends Component {
 
     mersennePrimeFast = (props) => {
         const num=this.state.num;
-        //var p1 = parseInt(num,10);
         var p1 = num
         if (p1 > 30)
         {
@@ -21,7 +20,6 @@ class MersenneFast extends Component {
             });
             return; 
         }
-
         if(p1 < 2)
         {
             this.setState({
@@ -30,29 +28,36 @@ class MersenneFast extends Component {
             return; 
         }
 
+        if(Number(p1) === 2)
+        {
+            this.setState({
+                output: String(num)+" is a mersenne prime!"
+            });
+            return;
+        }
+        console.log("p1 value is: "+ String(p1))
         //calculations done here forward
 
         var p2 = Math.pow(2, p1) -1;
-    
-        var next = 4 % p2;
+        console.log("p2 value is: "+ String(p2))
+        var next = 4 % p2
         for (let i = 1; i < p1 -1; i++)
         {
             next = (next * next -2)%p2
         }
-
+        console.log("next value is: "+ String(next))
         if(next === 0)
         {
             this.setState({
                 output: String(num)+" is a mersenne prime!"
             });
+            return;
         } else {
             this.setState({
                 output: String(num)+" is not a mersenne prime!"
             });
+            return;
         }
-
-        //alert("done")
-        return;
     }
 
     handleChange = (event) => {
@@ -64,7 +69,7 @@ class MersenneFast extends Component {
             <div>
                 <hr />
                 <p className="output">This is done using Lucas-Lehmer</p>
-                <p className="notice"><u>Please note!</u> This algorithm will only accept n less than 31, due to signed 32 bit numbers in the program language.</p>
+                <p className="notice"><u>Please note!</u> This algorithm will only accept n less than 31, due to react's computation of numbers.</p>
                 <p className="output"> Number being computed: {this.state.num}</p>
                 <input className = "input"
                     type="number"
