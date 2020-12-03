@@ -14,10 +14,18 @@ class MersenneFast extends Component {
         const num=this.state.num;
         //var p1 = parseInt(num,10);
         var p1 = num
-        if (p1 > 100)
+        if (p1 > 30)
         {
             this.setState({
-                output: "Input is too large! Please use n <= 100 due to computation speed."
+                output: "Input is too large! Please use n <= 30 due to computational limits."
+            });
+            return; 
+        }
+
+        if(p1 < 2)
+        {
+            this.setState({
+                output: "Please enter an n >= 2."
             });
             return; 
         }
@@ -56,7 +64,7 @@ class MersenneFast extends Component {
             <div>
                 <hr />
                 <p className="output">This is done using Lucas-Lehmer</p>
-                <p className="notice"><u>Please note!</u> This algorithm will only accept n less than 31, due to signed 32 bit numbers in the program language</p>
+                <p className="notice"><u>Please note!</u> This algorithm will only accept n less than 31, due to signed 32 bit numbers in the program language.</p>
                 <p className="output"> Number being computed: {this.state.num}</p>
                 <input className = "input"
                     type="number"

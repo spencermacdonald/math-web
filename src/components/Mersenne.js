@@ -14,13 +14,22 @@ class Mersenne extends Component {
         const num=this.state.num;
         //alert("This is a very slow algorithm");
         var p1 = num
-        if (p1 > 100)
+        if (p1 > 30)
         {
             this.setState({
-                output: "Input is too large! Please use n <= 100 due to computation speed."
+                output: "Input is too large! Please use n <= 30 due to computational limits."
             });
             return; 
         }
+
+        if(p1 < 2)
+        {
+            this.setState({
+                output: "Please enter an n >= 2."
+            });
+            return; 
+        }
+
         p1 = Math.pow(2, p1) -1;
         //alert(String(num))
         for(let i = 2, s = Math.sqrt(p1); i <= s; i++) {
@@ -46,6 +55,7 @@ class Mersenne extends Component {
         return (
             <div>
                 <p className="output">This is done using Sieve of Eratosthenes algorithm</p>
+                <p className="notice"><u>Please note!</u> This algorithm will only accept n less than 31, due to signed 32 bit numbers in the programming language.</p>
                 <p className="output"> Number being computed: {this.state.num}</p>
                 <input className = "input"
                     type="number"

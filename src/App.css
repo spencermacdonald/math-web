@@ -60,3 +60,24 @@ h2 {
   font-size: xx-large;
   text-align: center;
 }
+
+li {
+  text-align: left;
+  width: 700px;
+  font-size: medium;
+}
+.references {
+  padding-top: 20px;
+  text-align: left !important;
+  font-size: xx-large;
+}
+
+br {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.referencesDiv {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

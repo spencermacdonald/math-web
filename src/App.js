@@ -33,8 +33,11 @@ function App() {
         <div className="main">
           <MersenneFast />
         </div>
-        <div id="references">
-          <p id="references-text">test</p>
+        <div id = "referencesDiv">
+          <p id="references"><u>References</u></p>
+          <ul>
+            <li id="references-text"><a href="https://oeis.org/A000043"> Mersenne Primes Oeis</a></li>
+          </ul>
         </div>
       </header>
     </div>
