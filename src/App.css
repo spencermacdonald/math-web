@@ -90,3 +90,11 @@ ul {
 li {
   width: 660;
 }
+
+.graph {
+  padding-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%
+}

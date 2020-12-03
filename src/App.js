@@ -3,6 +3,7 @@ import MersenneFast from './components/MersenneFast.js'
 import './App.css';
 import equation from '../src/math.png'
 import './myStyle.css'
+import trend from '../src/Mersenne.png'
 
 function App() {
   return (
@@ -20,13 +21,20 @@ function App() {
             <li>
               <p className= "paragraph">
                 The largest currently known (and verified) Mersenne prime was found on <a href="https://www.mersenne.org/report_exponent/?exp_lo=82589933">Dec.07/2018</a>, which was found to be n = 82,589,933.
-                This is the M51 prime number.
+                This is the M<sub>51</sub> prime number.
               </p>
             </li>
             <li>
               <p className= "paragraph">
                 The <a href="https://www.mersenne.org/">GIMPS</a> is a project that revolves around using the combined power of thousands of computers that are
-                run in parrallel to both find and verify new Mersenne primes. This is done through running a <a href="https://www.mersenne.org/download/">custom software</a> developed by the project.
+                run in parrallel to both find and verify new Mersenne primes. This is done through running a <a href="https://www.mersenne.org/download/">custom 
+                software</a> developed by the project. This is similar to projects like <a href="https://foldingathome.org/">folding at home</a>, which uses a software 
+                that lets people lend their computing power to do protein simulations to assist in finding medical treatments for things like COVID-19. 
+              </p>
+              <p>
+                Currently GIMPS trend of finding a new Mersenne is:
+                <img src = {trend} className = "graph" alt="https://www.mersenne.org/primes/" />
+                Retrieved from: <a href="https://www.mersenne.org/primes/">GIMPS project</a>
               </p>
             </li>
           </ul>
@@ -39,7 +47,10 @@ function App() {
             </li>
             <li>
               <p className= "paragraph">
-               
+               When a mersenne prime is converted to base 2, it is simply a string of 1's with length 'p', which is given from the equation. This can also be calculated by using the formula: 
+              </p>
+              <p className= "paragraph">
+              p = log<sub>2</sub>(M<sub>p</sub> +1), where M<sub>p</sub> is a mersenne prime.
               </p>
             </li>
           </ul>
