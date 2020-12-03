@@ -1,0 +1,24 @@
+.main {
+    text-align: left;
+    padding-bottom: 30px;
+    width: 700px;
+}
+
+.paragraph {
+    text-align: left;
+    width: 700px;
+}
+
+.title {
+    text-align: center;
+}
+
+.output {
+    text-align: center;
+}
+
+.input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
