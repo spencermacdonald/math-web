@@ -6,13 +6,14 @@ class MersenneFast extends Component {
         super(props);
         this.state = {
             num: null,
-            output: ""
+            output: "Waiting on input..."
         };
     }
 
     mersennePrimeFast = (props) => {
         const num=this.state.num;
-        var p1 = parseInt(num,10);
+        //var p1 = parseInt(num,10);
+        var p1 = num
         if (p1 > 100)
         {
             this.setState({
@@ -34,11 +35,11 @@ class MersenneFast extends Component {
         if(next === 0)
         {
             this.setState({
-                output: "Input is a mersenne prime!"
+                output: String(num)+" is a mersenne prime!"
             });
         } else {
             this.setState({
-                output: "Input is not a mersenne prime!"
+                output: String(num)+" is not a mersenne prime!"
             });
         }
 
@@ -54,11 +55,13 @@ class MersenneFast extends Component {
         return (
             <div>
                 <p className="output">This is done using Lucas-Lehmer</p>
+                <p className="notice"><u>Please note!</u> This algorithm will only accept n less than 31, due to signed 32 bit numbers in the program language</p>
                 <p className="output"> Number being computed: {this.state.num}</p>
                 <input className = "input"
-                    type="text"
+                    type="number"
                     value={this.state.value}
                     onChange={this.handleChange}
+                    min="2"
                 />
                 <button className ="input" onClick = {this.mersennePrimeFast}>Begin computation</button>
                 <p className="output">{this.state.output}</p>

@@ -6,14 +6,14 @@ class Mersenne extends Component {
         super(props);
         this.state = {
             num: null,
-            output: ""
+            output: "Waiting on input..."
         };
     }
 
     mersennePrime = (props) => {
         const num=this.state.num;
         //alert("This is a very slow algorithm");
-        var p1 = parseInt(num,10);
+        var p1 = num
         if (p1 > 100)
         {
             this.setState({
@@ -26,14 +26,14 @@ class Mersenne extends Component {
         for(let i = 2, s = Math.sqrt(p1); i <= s; i++) {
           if(p1 % i === 0){
             this.setState({
-                output: "Input is not a mersenne prime!"
+                output: String(num)+" is not a mersenne prime!"
             });
             return;
           }
         }
         //alert("done")
         this.setState({
-            output: "Input is a mersenne prime!"
+            output: String(num)+" is a mersenne prime!"
         });
         return;
     }
@@ -49,9 +49,10 @@ class Mersenne extends Component {
                 <p className="output">This is done using Sieve of Eratosthenes algorithm</p>
                 <p className="output"> Number being computed: {this.state.num}</p>
                 <input className = "input"
-                    type="text"
+                    type="number"
                     value={this.state.value}
                     onChange={this.handleChange}
+                    min="2"
                 />
                 <button className ="input" onClick = {this.mersennePrime}>Begin computation</button>
                 <p className="output">{this.state.output}</p>
