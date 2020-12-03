@@ -81,3 +81,12 @@ br {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+ul {
+  width: 700px;
+  float: left;
+}
+
+li {
+  width: 660;
+}
