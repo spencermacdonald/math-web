@@ -54,6 +54,7 @@ class MersenneFast extends Component {
     render() {
         return (
             <div>
+                <hr />
                 <p className="output">This is done using Lucas-Lehmer</p>
                 <p className="notice"><u>Please note!</u> This algorithm will only accept n less than 31, due to signed 32 bit numbers in the program language</p>
                 <p className="output"> Number being computed: {this.state.num}</p>

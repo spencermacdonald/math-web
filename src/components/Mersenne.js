@@ -45,7 +45,6 @@ class Mersenne extends Component {
     render() {
         return (
             <div>
-                <hr/>
                 <p className="output">This is done using Sieve of Eratosthenes algorithm</p>
                 <p className="output"> Number being computed: {this.state.num}</p>
                 <input className = "input"

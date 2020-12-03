@@ -26,3 +26,14 @@
 .notice {
     text-align: left;
 }
+
+.references {
+    text-align: left !important;
+    font-size: x-small;
+}
+
+.references-text {
+    text-align: left !important;
+    font-size: x-small;
+    width: 700px;
+}
