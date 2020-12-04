@@ -39,7 +39,7 @@ function App() {
             </li>
           </ul>
           <h3 className="title"><u>Determining if a number is prime</u></h3>
-          <p className= "paragraph">This can be calculated by using numurous methods, however this site will focus on two of them. Those being the Sieve of Eratosthenes algorithm and the Lucas-Lehmer algorithm.</p>
+          <p className= "paragraph">This can be calculated by using numurous methods; however, this site will focus on two of them. Those being the Sieve of Eratosthenes algorithm and the Lucas-Lehmer algorithm.</p>
           <ul>
             <li>
               <p className= "paragraph"><u>Sieve of Eratosthenes</u></p>
