@@ -26,7 +26,7 @@ function App() {
             </li>
             <li>
               <p className= "paragraph">
-                The <a href="https://www.mersenne.org/">GIMPS</a> is a project that revolves around using the combined power of thousands of computers that are
+                The <a href="https://www.mersenne.org/">Great Internet Mersenne Prime Search</a> (more known as GIMPS) is a project that revolves around using the combined power of thousands of computers that are
                 run in parrallel to both find and verify new Mersenne primes. This is done through running a <a href="https://www.mersenne.org/download/">custom 
                 software</a> developed by the project. This is similar to projects like <a href="https://foldingathome.org/">folding at home</a>, which uses a software 
                 that lets people lend their computing power to do protein simulations to assist in finding medical treatments for things like COVID-19. 
@@ -35,6 +35,34 @@ function App() {
                 Currently GIMPS trend of finding a new Mersenne is:
                 <img src = {trend} className = "graph" alt="https://www.mersenne.org/primes/" />
                 Retrieved from: <a href="https://www.mersenne.org/primes/">GIMPS project</a>
+              </p>
+            </li>
+          </ul>
+          <h3 className="title"><u>Determining if a number is prime</u></h3>
+          <p className= "paragraph">This can be calculated by using numurous methods, however this site will focus on two of them. Those being the Sieve of Eratosthenes algorithm and the Lucas-Lehmer algorithm.</p>
+          <ul>
+            <p className= "paragraph"><u>Sieve of Eratosthenes</u></p>
+            <li>
+              <p className= "paragraph">
+                Sieve of Eratosthenes is an simple algorithm that when done, will generate a list of all the primes of a desired range. 
+              </p>
+              <img className= "wiki" src="//upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif" />
+            </li>
+            <p className= "paragraph"><u>Lucas-Lehmer</u></p>
+            <li>
+              <p className= "paragraph">
+               When a mersenne prime is converted to base 2, it is simply a string of 1's with length 'p', which is given from the equation. This can also be calculated by using the formula: 
+              </p>
+              <p className= "paragraph">
+              p = log<sub>2</sub>(M<sub>p</sub> +1), where M<sub>p</sub> is a mersenne prime.
+              </p>
+              <p className= "paragraph">
+              <u>Example :</u>
+              <p>
+                127 is a mersenne prime. <a href="https://www.mersenne.org/report_exponent/?exp_lo=7">Proof</a>
+              </p>
+              <p>p = log<sub>2</sub>(127 +1) = log<sub>2</sub>(128) = 7</p>
+              <p>So the binary representation of (127)<sub>10</sub> is (1111111)<sub>2</sub></p>
               </p>
             </li>
           </ul>
@@ -52,14 +80,27 @@ function App() {
               <p className= "paragraph">
               p = log<sub>2</sub>(M<sub>p</sub> +1), where M<sub>p</sub> is a mersenne prime.
               </p>
+              <p className= "paragraph">
+              <u>Example :</u>
+              <p>
+                127 is a mersenne prime. <a href="https://www.mersenne.org/report_exponent/?exp_lo=7">Proof</a>
+              </p>
+              <p>p = log<sub>2</sub>(127 +1) = log<sub>2</sub>(128) = 7</p>
+              <p>So the binary representation of (127)<sub>10</sub> is (1111111)<sub>2</sub></p>
+              </p>
+              <p>
+                <u>Side note:</u> due to numbers in JSX being signed-32 bits, this is the reason why algorithms designed in JSX can't compute numbers greater than 2<sup>31</sup> can't be computed easily. Hence the algorithms below 
+                only accepting n less than 31.
+              </p>
             </li>
           </ul>
+
         </div>
 
 
         <div className="main">
           <hr/>
-          <h2 id= "header2"><u>Try it for yourself</u></h2>
+          <h2 id= "header2"><u>Try it yourself!</u></h2>
           <p id="description">
             Please note that the input being asked for is the "n" for the equation given above. 
           </p>
@@ -70,7 +111,7 @@ function App() {
           <MersenneFast />
         </div>
         <div id = "referencesDiv">
-          <p id="references"><u>References</u></p>
+          <h3><u>References</u></h3>
           <ul>
             <li id="references-text"><a href="https://oeis.org/A000043"> Mersenne Primes Oeis</a></li>
             <li id="references-text"><a href="https://www.mersenne.org/primes/"> History of Mersenne primes / known primes</a></li>
