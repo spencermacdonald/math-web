@@ -41,28 +41,21 @@ function App() {
           <h3 className="title"><u>Determining if a number is prime</u></h3>
           <p className= "paragraph">This can be calculated by using numurous methods, however this site will focus on two of them. Those being the Sieve of Eratosthenes algorithm and the Lucas-Lehmer algorithm.</p>
           <ul>
-            <p className= "paragraph"><u>Sieve of Eratosthenes</u></p>
             <li>
+              <p className= "paragraph"><u>Sieve of Eratosthenes</u></p>
               <p className= "paragraph">
-                Sieve of Eratosthenes is an simple algorithm that when done, will generate a list of all the primes of a desired range. 
+                Sieve of Eratosthenes is an simple algorithm that when done, will generate a list of all the primes of a desired range. The general algorithm is to make a list of numbers from 2 to n, then take the first 
+                element not crossed out, add it to the list of primes, then cross out all multiples of the element. The algorithm then selects the new first non-crossed out element and repeats until it reaches the sqrt(n) element.
               </p>
               <img className= "wiki" src="//upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif" />
+              <p className="paragraph">
+                Retrieved from: <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes" alt="GIF of algorithm">wikipedia</a>
+              </p>
             </li>
-            <p className= "paragraph"><u>Lucas-Lehmer</u></p>
             <li>
+              <p className= "paragraph"><u>Lucas-Lehmer</u></p>
               <p className= "paragraph">
-               When a mersenne prime is converted to base 2, it is simply a string of 1's with length 'p', which is given from the equation. This can also be calculated by using the formula: 
-              </p>
-              <p className= "paragraph">
-              p = log<sub>2</sub>(M<sub>p</sub> +1), where M<sub>p</sub> is a mersenne prime.
-              </p>
-              <p className= "paragraph">
-              <u>Example :</u>
-              <p>
-                127 is a mersenne prime. <a href="https://www.mersenne.org/report_exponent/?exp_lo=7">Proof</a>
-              </p>
-              <p>p = log<sub>2</sub>(127 +1) = log<sub>2</sub>(128) = 7</p>
-              <p>So the binary representation of (127)<sub>10</sub> is (1111111)<sub>2</sub></p>
+               TO DO
               </p>
             </li>
           </ul>
@@ -116,6 +109,7 @@ function App() {
             <li id="references-text"><a href="https://oeis.org/A000043"> Mersenne Primes Oeis</a></li>
             <li id="references-text"><a href="https://www.mersenne.org/primes/"> History of Mersenne primes / known primes</a></li>
             <li id="references-text"><a href="https://www.mersenne.org/#:~:text=GIMPS%2C%20the%20Great%20Internet%20Mersenne%20Prime%20Search%2C%20was%20formed%20in,%22needles%20in%20a%20haystack%22.">History of GIMPS</a></li>
+            <li id="references-text"><a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Info on Sieve of Eratosthenes</a></li>
           </ul>
         </div>
       </header>

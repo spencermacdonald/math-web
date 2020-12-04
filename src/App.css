@@ -89,6 +89,7 @@ ul {
 
 li {
   width: 660;
+  padding-top: 10px; /* Remove if too much space*/
 }
 
 .graph {
