@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="main">
-          <h1 className="title"><u>Mersenne Prime</u></h1>
+          <h1 className="title"><u>Mersenne Primes</u></h1>
           <p className= "paragraph">What is a Mersenne Prime? Well a mersenne prime is a prime number that can be written in the form:</p>
           <img src={equation} alt="M = 2^n -1"/>
           <p className= "paragraph">Where n is an integer that makes the RHS equation equal to the prime number on the LHS.
@@ -36,6 +36,7 @@ function App() {
               <p>
                 Currently GIMPS trend of finding a new Mersenne prime is:
                 <img src = {trend} className = "graph" alt="https://www.mersenne.org/primes/" />
+                <p className= "paragraph">Given the graph above, if the trend holds, we can expect a new mersenne prime to be discovered within 1-2 months</p>
                 Retrieved from: <a href="https://www.mersenne.org/primes/">GIMPS project</a>
               </p>
             </li>
@@ -65,7 +66,7 @@ function App() {
                Lucas-Lehmer test is a primality test for Mersenne numbers (any number that can be put in the form 2<sup>n</sup>-1), since that M<sub>p</sub> is prime if and only if:
               </p>
               <div className="white-box">
-                <p className= "eq">s<sub>p-2</sub> &#8801; (mod M<sub>p</sub>)</p>
+                <p className= "eq">s<sub>p-2</sub> &#8801; 0 (mod M<sub>p</sub>)</p>
               </div>
               <p className= "paragraph">Given:</p>
               <div className="white-box">
@@ -106,12 +107,17 @@ function App() {
             </li>
             <li>
               <p className= "paragraph">
-                We studied residue classes earlier in the semester. //TODO
+                Both implemented algorithms use congruence to check divisibility, which we used extensively throughout the term. 
               </p>
             </li>
             <li>
               <p className= "paragraph">
-                Similar to Sieve, which gives you the set of all primes below an integer 'n', the <a href="https://oeis.org/A000720">pi function</a> which we studied in class returns the number 
+                Sieve of Eratosthenes removes the residue class [0]<sub>p</sub> (p being prime numbers within the range) from a set from 2 to n in order to find the primes within the range.
+              </p>
+            </li>
+            <li>
+              <p className= "paragraph">
+                Similar to Sieve, which gives you the set of all primes below an integer 'n', the <a href="https://oeis.org/A000720">pi function</a> (or PrimePi function) which we studied in class returns the number 
                 of primes below a given integer 'n'.
               </p>
             </li>
