@@ -4,6 +4,8 @@ import './App.css';
 import equation from '../src/math.png'
 import './myStyle.css'
 import trend from '../src/Mersenne.png'
+import alg1 from '../src/alg.png'
+import alg2 from '../src/alg2.png'
 
 function App() {
   return (
@@ -32,7 +34,7 @@ function App() {
                 that lets people lend their computing power to do protein simulations to assist in finding medical treatments for things like COVID-19. 
               </p>
               <p>
-                Currently GIMPS trend of finding a new Mersenne is:
+                Currently GIMPS trend of finding a new Mersenne prime is:
                 <img src = {trend} className = "graph" alt="https://www.mersenne.org/primes/" />
                 Retrieved from: <a href="https://www.mersenne.org/primes/">GIMPS project</a>
               </p>
@@ -47,19 +49,35 @@ function App() {
                 Sieve of Eratosthenes is an simple algorithm that when done, will generate a list of all the primes of a desired range. The general algorithm is to make a list of numbers from 2 to n, then take the first 
                 element not crossed out, add it to the list of primes, then cross out all multiples of the element. The algorithm then selects the new first non-crossed out element and repeats until it reaches the sqrt(n) element.
               </p>
+              <p className="paragraph">Sieve of Eratosthenes algorithm visulaized:</p>
               <img className= "wiki" src="//upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif" />
               <p className="paragraph">
-                Retrieved from: <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes" alt="GIF of algorithm">wikipedia</a>
+                <sub>Retrieved from: <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes" alt="GIF of algorithm">wikipedia</a></sub>
               </p>
+              <p className= "paragraph">Pseudocode for the algorithm:</p>
+              <img className="graph" src={alg1} alt="Siv sudocode"></img>
             </li>
             <li>
               <p className= "paragraph"><u>Lucas-Lehmer</u></p>
               <p className= "paragraph">
-               TO DO
+               The Lucas-Lehmer primality test is a test initally created in 1856 by Édouard Lucas, but was then improved in 1878 by Lucas, and then subsequently by Derrick 
+               Henry Lehmer in the 1930s<sup><a href="http://oeis.org/wiki/Lucas%E2%80%93Lehmer_primality_test#:~:text=The%20Lucas%E2%80%93Lehmer%20test%20(LLT,D.%20H.%20Lehmer%20in%20the%201930s.">[1]</a></sup>. 
+               Lucas-Lehmer test is a primality test for Mersenne numbers (any number that can be put in the form 2<sup>n</sup>-1), since that M<sub>p</sub> is prime if and only if:
               </p>
+              <div className="white-box">
+                <p className= "eq">s<sub>p-2</sub> &#8801; (mod M<sub>p</sub>)</p>
+              </div>
+              <p className= "paragraph">Given:</p>
+              <div className="white-box">
+                <p className= "eq">s<sub>0</sub> = 4</p>
+                <p className= "eq">s<sub>i</sub> = (s<sub>i-1</sub>)<sup>2</sup> -2, where i &#8805; 1</p>
+              </div>
+              <p className= "paragraph"><u>Pseudocode for the algorithm:</u></p>
+              <img className="graph" src={alg2} alt="Siv sudocode"></img>
+              <p className= "paragraph">Retrieved from: <a href="http://oeis.org/wiki/Lucas%E2%80%93Lehmer_primality_test#:~:text=The%20Lucas%E2%80%93Lehmer%20test%20(LLT,D.%20H.%20Lehmer%20in%20the%201930s.">OEIS wiki</a></p>
             </li>
           </ul>
-          <h3 className="title"><u>Relating back to Math 3093</u></h3>
+          <h3 className="title"><u>Connections to Math 3093</u></h3>
           <ul>
             <li>
               <p className= "paragraph">
@@ -68,7 +86,7 @@ function App() {
             </li>
             <li>
               <p className= "paragraph">
-               When a mersenne prime is converted to base 2, it is simply a string of 1's with length 'p', which is given from the equation. This can also be calculated by using the formula: 
+               When a mersenne prime is converted to base 2, it is simply a string of 1's with length 'p', which is given from the equation. This can also be calculated by using a rearranged formula from above, which is: 
               </p>
               <p className= "paragraph">
               p = log<sub>2</sub>(M<sub>p</sub> +1), where M<sub>p</sub> is a mersenne prime.
@@ -82,8 +100,19 @@ function App() {
               <p>So the binary representation of (127)<sub>10</sub> is (1111111)<sub>2</sub></p>
               </p>
               <p>
-                <u>Side note:</u> due to numbers in JSX being signed-32 bits, this is the reason why algorithms designed in JSX can't compute numbers greater than 2<sup>31</sup> can't be computed easily. Hence the algorithms below 
+                <u>Side note:</u> JSX (which was used for making this website) uses 32 bit signed numbers, and this is the reason why algorithms designed below can't compute numbers greater than 2<sup>31</sup>. Hence the algorithms below 
                 only accepting n less than 31.
+              </p>
+            </li>
+            <li>
+              <p className= "paragraph">
+                We studied residue classes earlier in the semester. //TODO
+              </p>
+            </li>
+            <li>
+              <p className= "paragraph">
+                Similar to Sieve, which gives you the set of all primes below an integer 'n', the <a href="https://oeis.org/A000720">pi function</a> which we studied in class returns the number 
+                of primes below a given integer 'n'.
               </p>
             </li>
           </ul>

@@ -5,7 +5,7 @@ class MersenneFast extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            num: null,
+            num: 2,
             output: "Waiting on input..."
         };
     }
@@ -70,8 +70,9 @@ class MersenneFast extends Component {
                 <hr />
                 <p className="output">This is done using Lucas-Lehmer</p>
                 <p className="notice"><u>Please note!</u> This algorithm will only accept n less than 31, due to react's computation of numbers.</p>
-                <p className="output"> Number being computed: {this.state.num}</p>
+                <p className="output"> Number being computed: 2<sup>{this.state.num}</sup>-1</p>
                 <input className = "input"
+                    defaultValue= {2}
                     type="number"
                     value={this.state.value}
                     onChange={this.handleChange}
