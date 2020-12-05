@@ -16,7 +16,7 @@ function App() {
           <p className= "paragraph">What is a Mersenne Prime? Well a mersenne prime is a prime number that can be written in the form:</p>
           <img src={equation} alt="M = 2^n -1"/>
           <p className= "paragraph">Where n is an integer that makes the RHS equation equal to the prime number on the LHS.
-            These primes were named after french mathmatician Marin Mersenne, who spent his life researching them.
+            These primes were named after french mathmatician <a href="https://primes.utm.edu/mersenne/LukeMirror/mersenne.htm">Marin Mersenne</a>, who spent his life researching them.
           </p>
           <h3 className="title"><u>More facts about Mersenne Primes</u></h3>
           <ul>
@@ -29,20 +29,20 @@ function App() {
             <li>
               <p className= "paragraph">
                 The <a href="https://www.mersenne.org/">Great Internet Mersenne Prime Search</a> (more known as GIMPS) is a project that revolves around using the combined power of thousands of computers that are
-                run in parrallel to both find and verify new Mersenne primes. This is done through running a <a href="https://www.mersenne.org/download/">custom 
-                software</a> developed by the project. This is similar to projects like <a href="https://foldingathome.org/">folding at home</a>, which uses a software 
+                running the same computer program to both find and verify new Mersenne primes. This is done through running a <a href="https://www.mersenne.org/download/">custom 
+                software</a> developed by the project (prime95). This is similar to projects like <a href="https://foldingathome.org/">folding at home</a>, which uses a software 
                 that lets people lend their computing power to do protein simulations to assist in finding medical treatments for things like COVID-19. 
               </p>
               <p>
                 Currently GIMPS trend of finding a new Mersenne prime is:
                 <img src = {trend} className = "graph" alt="https://www.mersenne.org/primes/" />
-                <p className= "paragraph">Given the graph above, if the trend holds, we can expect a new mersenne prime to be discovered within 1-2 months</p>
+                <p className= "paragraph">Given the graph above, if the trend holds, we can expect a new mersenne prime to be discovered within 1-2 months.</p>
                 Retrieved from: <a href="https://www.mersenne.org/primes/">GIMPS project</a>
               </p>
             </li>
           </ul>
           <h3 className="title"><u>Determining if a number is prime</u></h3>
-          <p className= "paragraph">This can be calculated by using numurous methods; however, this site will focus on two of them. Those being the Sieve of Eratosthenes algorithm and the Lucas-Lehmer algorithm.</p>
+          <p className= "paragraph">This can be calculated by using numurous methods; however, this site will focus on two of them. Those being, the Sieve of Eratosthenes algorithm and the Lucas-Lehmer algorithm.</p>
           <ul>
             <li>
               <p className= "paragraph"><u>Sieve of Eratosthenes</u></p>
@@ -107,7 +107,7 @@ function App() {
             </li>
             <li>
               <p className= "paragraph">
-                Both implemented algorithms use congruence to check divisibility, which we used extensively throughout the term. 
+                Both implemented algorithms use congruence to check divisibility, which we have used extensively throughout the term. 
               </p>
             </li>
             <li>
@@ -145,6 +145,7 @@ function App() {
             <li id="references-text"><a href="https://www.mersenne.org/primes/"> History of Mersenne primes / known primes</a></li>
             <li id="references-text"><a href="https://www.mersenne.org/#:~:text=GIMPS%2C%20the%20Great%20Internet%20Mersenne%20Prime%20Search%2C%20was%20formed%20in,%22needles%20in%20a%20haystack%22.">History of GIMPS</a></li>
             <li id="references-text"><a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Info on Sieve of Eratosthenes</a></li>
+            <li id="references-text"><a href="https://rosettacode.org/wiki/Lucas-Lehmer_test">Examples of L-L being implemented</a></li>
           </ul>
         </div>
       </header>
