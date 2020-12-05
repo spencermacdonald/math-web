@@ -35,13 +35,13 @@ class Mersenne extends Component {
         for(let i = 2, s = Math.sqrt(p1); i <= s; i++) {
           if(p1 % i === 0){
             this.setState({
-                output: String(num)+" is not a mersenne prime!"
+                output: "Not a mersenne prime!"
             });
             return;
           }
         }
         this.setState({
-            output: String(num)+" is a mersenne prime!"
+            output: "It is a mersenne prime!"
         });
         return;
     }

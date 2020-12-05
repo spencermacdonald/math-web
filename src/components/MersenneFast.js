@@ -31,7 +31,7 @@ class MersenneFast extends Component {
         if(Number(p1) === 2)
         {
             this.setState({
-                output: String(num)+" is a mersenne prime!"
+                output: "It is a mersenne prime!"
             });
             return;
         }
@@ -49,12 +49,12 @@ class MersenneFast extends Component {
         if(next === 0)
         {
             this.setState({
-                output: String(num)+" is a mersenne prime!"
+                output: "It is a mersenne prime!"
             });
             return;
         } else {
             this.setState({
-                output: String(num)+" is not a mersenne prime!"
+                output: " Not a mersenne prime!"
             });
             return;
         }
